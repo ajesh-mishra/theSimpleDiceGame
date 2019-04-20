@@ -1,7 +1,16 @@
 var activePlayer, currentScore, roundScore
+
+var player0Panel = document.querySelector(".player-0-panel");
+var player1Panel = document.querySelector(".player-1-panel");
+var playerCurrentBox = document.querySelector(".player-current-box");
+var player2Score = document.querySelector(".player2score");
+var btnRoll = document.querySelector(".btn-roll");
+var btnNew = document.querySelector(".btn-new")
+var btnHold = document.querySelector(".btn-hold");
+
 resetScore();
 
-document.querySelector(".btn-roll").addEventListener("click", function () {
+btnRoll.addEventListener("click", function () {
   var dice = Math.floor(Math.random() * 6) + 1;
 
   diceImage = document.querySelector(".dice");
@@ -16,18 +25,18 @@ document.querySelector(".btn-roll").addEventListener("click", function () {
   }
 });
 
-document.querySelector(".btn-hold").addEventListener("click", function () {
+btnHold.addEventListener("click", function () {
   roundScore[activePlayer] += currentScore;
   document.querySelector("#score-" + activePlayer).textContent = roundScore[activePlayer];
 
   if (roundScore[activePlayer] >= 20) {
-    document.querySelector(".player-0-panel").classList.toggle("active");
-    document.querySelector(".player-1-panel").classList.toggle("active");
+    player0Panel.classList.toggle("active");
+    player1Panel.classList.toggle("active");
     document.querySelector("#score-" + activePlayer).textContent = roundScore[activePlayer] + " WON!";
-    document.querySelector(".player-current-box").style.display = 'none';
-    document.querySelector(".player2score").style.display = 'none';
-    document.querySelector(".btn-hold").style.display = 'none';
-    document.querySelector(".btn-roll").style.display = 'none';
+    playerCurrentBox.style.display = 'none';
+    player2Score.style.display = 'none';
+    btnHold.style.display = 'none';
+    btnRoll.style.display = 'none';
   }
 
   switchPlayer();
@@ -36,20 +45,20 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
 document.querySelector(".btn-new").addEventListener('click', function() {
   resetScore();
 
-  document.querySelector(".player-0-panel").classList.add("active");
-  document.querySelector(".player-1-panel").classList.remove("active");
-  document.querySelector(".player-current-box").style.display = 'block';
-  document.querySelector(".player2score").style.display = 'block';
-  document.querySelector(".btn-hold").style.display = 'block';
-  document.querySelector(".btn-roll").style.display = 'block';
+  player0Panel.classList.add("active");
+  player1Panel.classList.remove("active");
+  playerCurrentBox.style.display = 'block';
+  player2Score.style.display = 'block';
+  btnHold.style.display = 'block';
+  btnRoll.style.display = 'block';
 });
 
 function switchPlayer() {
   currentScore = 0;
   document.querySelector("#current-" + activePlayer).textContent = 0;
   document.querySelector(".dice").style.display = "none";
-  document.querySelector(".player-0-panel").classList.toggle("active");
-  document.querySelector(".player-1-panel").classList.toggle("active");
+  player0Panel.classList.toggle("active");
+  player0Panel.classList.toggle("active");
   activePlayer = Math.abs(activePlayer - 1);
 }
 
@@ -65,31 +74,3 @@ function resetScore() {
   document.querySelector("#current-0").textContent = 0;
   document.getElementById("current-1").textContent = 0;
 }
-
-// console.log("Hello World!");
-
-// var john = {
-//   bill : [124, 48, 268, 180, 42, 200],
-//   tip : [],
-//   billPlusTip : [],
-//   calculateTip : function() {
-//     for (i = 0; i < this.bill.length; i++) {
-//       console.log(this.bill[i])
-//       switch (this.bill[i]) {
-//         case this.bill[i] < 50:
-//           tipAmount = .2;
-//           break;
-//         case this.bill[i] > 50 && this.bill[i] < 200:
-//           tipAmount = .15;
-//           break;
-//         default:
-//           tipAmount = .1;
-//       }
-//       this.tip[i] = this.bill[i] * tipAmount;
-//       this.billPlusTip[i] = this.bill[i] + this.tip[i];
-//     }
-//   }
-// };
-
-// john.calculateTip();
-// console.log(john.bill, john.tip, john.billPlusTip)
