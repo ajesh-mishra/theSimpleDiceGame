@@ -58,7 +58,7 @@ function switchPlayer() {
   document.querySelector("#current-" + activePlayer).textContent = 0;
   document.querySelector(".dice").style.display = "none";
   player0Panel.classList.toggle("active");
-  player0Panel.classList.toggle("active");
+  player1Panel.classList.toggle("active");
   activePlayer = Math.abs(activePlayer - 1);
 }
 
