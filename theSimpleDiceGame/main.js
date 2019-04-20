@@ -1,13 +1,5 @@
-document.querySelector(".dice").style.display = "none";
-
-document.querySelector("#score-0").textContent = 0;
-document.getElementById("score-1").textContent = 0;
-document.querySelector("#current-0").textContent = 0;
-document.getElementById("current-1").textContent = 0;
-
-var activePlayer = 0;
-var currentScore = 0;
-var roundScore = [0, 0];
+var activePlayer, currentScore, roundScore
+resetScore();
 
 document.querySelector(".btn-roll").addEventListener("click", function () {
   var dice = Math.floor(Math.random() * 6) + 1;
@@ -42,7 +34,14 @@ document.querySelector(".btn-hold").addEventListener("click", function () {
 });
 
 document.querySelector(".btn-new").addEventListener('click', function() {
-  
+  resetScore();
+
+  document.querySelector(".player-0-panel").classList.add("active");
+  document.querySelector(".player-1-panel").classList.remove("active");
+  document.querySelector(".player-current-box").style.display = 'block';
+  document.querySelector(".player2score").style.display = 'block';
+  document.querySelector(".btn-hold").style.display = 'block';
+  document.querySelector(".btn-roll").style.display = 'block';
 });
 
 function switchPlayer() {
@@ -52,6 +51,19 @@ function switchPlayer() {
   document.querySelector(".player-0-panel").classList.toggle("active");
   document.querySelector(".player-1-panel").classList.toggle("active");
   activePlayer = Math.abs(activePlayer - 1);
+}
+
+function resetScore() {
+
+  activePlayer = 0;
+  currentScore = 0;
+  roundScore = [0, 0];
+
+  document.querySelector(".dice").style.display = "none";
+  document.querySelector("#score-0").textContent = 0;
+  document.getElementById("score-1").textContent = 0;
+  document.querySelector("#current-0").textContent = 0;
+  document.getElementById("current-1").textContent = 0;
 }
 
 // console.log("Hello World!");
