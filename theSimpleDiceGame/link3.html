@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <title>Document</title>
+
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    a {
+      text-decoration: none;
+    }
+    .input-area {
+      width: 2.7em;
+      border-radius: 5px;
+      font-size: 0.9em;
+      padding: 0.2em 0.4em;
+    }
+    .input-area:focus {
+      outline: 0;
+    }
+  </style>
+
+</head>
+<body>
+  <a href="https://www.youtube.com/" target="_blank" id="youtube">YouTube  </a>
+  <input class="input-area" type="text" placeholder="#REQ">
+  <!-- U4VNgUVX1po -->
+
+  <script>
+    document.getElementById('youtube').addEventListener('click', function() {
+      reqNo = document.querySelector('.input-area').value;
+      if (reqNo) {
+        link = "https://www.youtube.com/watch?v=";
+        document.getElementById('youtube').setAttribute('href', link + reqNo);
+        reqNo = undefined;
+      }
+    });
+  </script>
+
+</body>
+</html>
