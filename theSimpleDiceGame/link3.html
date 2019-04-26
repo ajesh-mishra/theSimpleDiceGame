@@ -39,7 +39,9 @@
       if (reqNo) {
         link = "https://www.youtube.com/watch?v=";
         document.getElementById('youtube').setAttribute('href', link + reqNo);
-        reqNo = undefined;
+      } else {
+        link = "https://www.youtube.com/";
+        document.getElementById('youtube').setAttribute('href', link);
       }
     });
   </script>
