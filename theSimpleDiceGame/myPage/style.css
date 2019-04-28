@@ -1,0 +1,59 @@
+.section1 {
+  color: white;
+  background-color: black;
+  background-image: url('section1.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  padding: 9em 0em 0em 4em;
+}
+
+.section1 h1,
+.section2 h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 5em;
+  font-weight: 800 !important;
+  color: white;
+}
+
+.section1 a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  margin-right: 1.5em !important;
+}
+
+.section1 a h3 {
+  padding-top: 0.5em;
+  padding-left: 0.8em;
+}
+
+.section1 a h3:hover {
+  text-decoration: none !important;
+}
+
+.section1 li a {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  margin-right: 1.5em !important;
+}
+
+.section1 li a:hover {
+  border-bottom: solid;
+  border-bottom-color: white;
+}
+
+.section1 li a:focus {
+  border-bottom: solid;
+  border-bottom-color: white;
+}
+
+.section2 {
+  height: 20em;
+  background-image: url('section2.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

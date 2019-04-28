@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet">
+  <title>Dice Game</title>
+  <style>
+    body {
+      background-color: white;
+    }
+
+    .wrapper {
+      background-color: whitesmoke;
+      border: 2px solid black;
+      border-radius: 15px;
+      width: 60%;
+      margin: 2em auto;
+      /* color: rgb(23, 23, 173); */
+      color: black;
+      height: 500px;
+      position: absolute;
+      left: 20%;
+    }
+
+    .banner {
+      position: relative;
+      left: 40%;
+    }
+
+    .player-1 {
+      position: absolute;
+      left: 10%;
+    }
+
+    .player-2 {
+      position: relative;
+      left: 60%;
+    }
+
+    /* Buttons */
+    button {
+      border: none;
+      cursor: pointer;
+      background-color: whitesmoke;
+    }
+
+    button:hover h2{
+      font-weight: 600;
+      
+    }
+
+    button:hover i {
+      padding-right: .1em;
+      background-color: rgb(red, green, blue);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    i {
+      color: blue;
+    }
+
+    h2 {
+      font-weight: 500;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="banner">
+      <button class="btn-new">
+        <h2><i class="icon ion-md-arrow-dropright-circle"></i> New Game</h2>
+      </button>
+    </div>
+    <div class="player-1 active">
+      <h1>Player 1: <span id="round-score-1">20</span></h1>
+    </div>
+    <div class="player-2">
+      <h1>Player 2: <span id="round-score-2">20</span></h1>
+    </div>
+    div.
+  </div>
+</body>
+</html>
