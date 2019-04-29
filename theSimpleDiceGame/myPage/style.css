@@ -9,8 +9,7 @@
   padding: 9em 0em 0em 4em;
 }
 
-.section1 h1,
-.section2 h1 {
+.section1 h1 {
   font-family: 'Open Sans', sans-serif;
   font-size: 5em;
   font-weight: 800 !important;
@@ -26,12 +25,12 @@
 
 .section1 a h3 {
   padding-top: 0.5em;
-  padding-left: 0.8em;
+  padding-left: 0.5em;
 }
 
-.section1 a h3:hover {
+/* .section1 a h3:hover {
   text-decoration: none !important;
-}
+} */
 
 .section1 li a {
   color: white;
@@ -51,9 +50,18 @@
 }
 
 .section2 {
-  height: 20em;
+  height: 23em;
   background-image: url('section2.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.section2 h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.7em;
+  font-weight: 800 !important;
+  color: white;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
 }
